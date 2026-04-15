@@ -1,46 +1,51 @@
 # PC-index
 
-PC-index (Prevalence–CP10K index) is a metric for summarizing gene expression in single-cell RNA-seq data by integrating expression magnitude and cellular prevalence into a single value.
+**PC-index** (Prevalence–CP10K index) is a metric for summarizing gene expression in single-cell RNA-seq data by integrating expression magnitude and cellular prevalence into a single value.
+
+A PC-index of *j* means that at least *j%* of cells express the gene at **≥ j CP10K**.
 
 ## Definition
 
-For each gene, the PC-index is defined as the largest value *j* such that at least *j%* of cells have expression ≥ *j* (CP10K).
+For a given gene, let the CP10K expression values across cells be sorted in decreasing order:
+
+x(1) ≥ x(2) ≥ ... ≥ x(N)
+
+For rank *k*, the corresponding prevalence is:
+
+100 × k / N
+
+The **continuous PC-index** is defined as:
+
+PC-index = max over k of min(x(k), 100 × k / N)
+
+This corresponds to the intersection between the ranked expression curve and the prevalence axis expressed as a percentage of cells.
 
 ## Input
 
 A **cell-by-gene matrix** of CP10K-normalized expression values:
 
-- rows = cells  
-- columns = genes  
-- values = CP10K (counts per 10,000)  
-- first column = cell identifiers (optional)
+- rows = cells
+- columns = genes
+- values = CP10K
+- first column = cell identifiers
 
-## Usage
-
-```bash
-python code/summarize_pcindex_matrix.py input_matrix.csv output_summary.csv
-```
+Supported formats:
+- CSV
+- TSV
 
 ## Output
 
-A gene-level summary table including:
+A gene-level summary table with:
 
-- number of cells  
-- mean CP10K  
-- percentage of expressing cells  
-- PC-index  
+- `gene`
+- `n_cells`
+- `mean_cp10k`
+- `pct_positive`
+- `pc_index`
 
-## Example
+## Python usage
+
+Run from the command line:
 
 ```bash
-python code/summarize_pcindex_matrix.py example_data/small_matrix.csv example_output/summary.csv
-```
-
-## Notes
-
-- Input must be **CP10K-normalized** (not raw counts, not log-transformed).  
-- The PC-index emphasizes genes with **jointly strong and widespread expression**.  
-
-## Citation
-
-Manuscript in preparation.
+python pc_index.py input_matrix.csv output_summary.csv
