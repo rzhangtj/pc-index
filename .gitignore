@@ -1,18 +1,28 @@
 # ===== PC-index specific =====
+
+# Large single-cell data files
 *.h5ad
 *.h5
 *.loom
 
+# Large matrices (do NOT upload)
 adipocyte_cp10k_matrix.csv
 *_summary_from_matrix.csv
 
+# Ignore all CSV by default
 *.csv
+
+# BUT keep the example input
 !example_data/small_matrix.csv
 
-# Python
+# ===== Python =====
 __pycache__/
 *.pyc
 
-# temp
+# ===== Temporary / logs =====
 *.log
 *.tmp
+
+# ===== Environment =====
+.env
+.venv/
