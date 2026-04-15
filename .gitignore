@@ -1,0 +1,18 @@
+# ===== PC-index specific =====
+*.h5ad
+*.h5
+*.loom
+
+adipocyte_cp10k_matrix.csv
+*_summary_from_matrix.csv
+
+*.csv
+!example_data/small_matrix.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# temp
+*.log
+*.tmp
