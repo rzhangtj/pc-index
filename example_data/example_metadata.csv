@@ -1,0 +1,13 @@
+cell_id,sample_id,condition,class,subclass
+A-45_AACACGTAGTCAATAG-1,A-45,Uninjured,Microglia,Microglia/Hematopoietic
+A-45_AACTTTCAGGGAACGG-1,A-45,Uninjured,Microglia,Microglia/Hematopoietic
+A-45_AACTTTCCAGCTGGCT-1,A-45,Uninjured,Microglia,Microglia/Hematopoietic
+A-46_AAATGCCAGCGTGTCC-1,A-46,Uninjured,Microglia,Microglia/Hematopoietic
+A-46_AACTGGTGTCCGAATT-1,A-46,Uninjured,Microglia,Microglia/Hematopoietic
+A-46_AAGGCAGGTGGACGAT-1,A-46,Uninjured,Microglia,Microglia/Hematopoietic
+C-41_AGCCTAACACATCCGG-1,C-41,1 WkPI,Microglia,Microglia/Hematopoietic
+C-41_AAAGATGGTCGGGTCT-1,C-41,1 WkPI,Microglia,Microglia/Hematopoietic
+C-41_AAATGCCTCCAGTATG-1,C-41,1 WkPI,Microglia,Microglia/Hematopoietic
+C-42_AAACCTGAGCCACTAT-1,C-42,1 WkPI,Microglia,Microglia/Hematopoietic
+C-42_AAACGGGGTACTCGCG-1,C-42,1 WkPI,Microglia,Microglia/Hematopoietic
+C-42_AAACGGGTCAGGTAAA-1,C-42,1 WkPI,Microglia,Microglia/Hematopoietic
